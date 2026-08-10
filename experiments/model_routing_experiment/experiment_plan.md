@@ -12,7 +12,7 @@ actual-configuration sampling distributions on requested-configuration canaries
 For each fixed requested model configuration, all three actual model configurations are evaluated on the
 same canary prompt slots supplied by the requested config.
 
-This is operationally simpler than actual-config-specific canaries. A requested-configuration
+This is operationally simpler than actual-model-configuration-specific canaries. A requested-configuration
 owner can find a canary suite once for their own model and reuse it against any
 actual model configuration.
 
@@ -106,7 +106,7 @@ The main graph notebook follows the requested-configuration-canary protocol abov
 requested model configuration supplies the canary prompts, and every actual model configuration is
 evaluated on the requested model configuration's canaries.
 
-Under the fixed decoding setup, the `Qwen2.5-7B-Instruct` actual-config curve is
+Under the fixed decoding setup, the `Qwen2.5-7B-Instruct` actual model configuration curve is
 undefined when the requested config is `Qwen2.5-14B-Instruct` or
 `Qwen2.5-32B-Instruct`, because the top-p cutoff removes token ID `16` on some
 of the requested-configuration-owned canaries. To produce a visual comparison for these
@@ -120,7 +120,7 @@ each graph:
 | Qwen2.5-32B-Instruct | Qwen2.5-32B-Instruct requested config and Qwen2.5-7B-Instruct actual config | Qwen2.5-7B-Instruct |
 
 This is a prompt-engineering workaround, not a change to the model payloads or
-decoding seed. The purpose is to show the 7B actual-config curve under canaries where
+decoding seed. The purpose is to show the 7B actual model configuration curve under canaries where
 both target tokens remain sampleable. In this focused notebook, the
 Qwen2.5-14B-Instruct requested config uses `7,500` samples per context and the
 Qwen2.5-32B-Instruct requested config uses `15,000` samples per context.

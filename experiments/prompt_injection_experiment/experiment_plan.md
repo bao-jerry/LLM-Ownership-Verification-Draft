@@ -17,16 +17,28 @@ weights are the same.
 ## Prompt-Formatting Variants
 
 The prompt-selection notebook intentionally leaves the three variants under
-user control. It initializes all three variants as identical baseline
-prompt-formatting copies with `system_prompt = None`. Define exactly three
-entries in `PROMPT_FORMATTING_VARIANTS`.
+user control. For the final recorded prompt-injection experiment, define
+exactly three entries in `PROMPT_FORMATTING_VARIANTS`:
+
+| Variant key | Plot label | User-specified system prompt |
+| --- | --- | --- |
+| `variant_1` | `PI Variant 1` | `None` |
+| `variant_2` | `PI Variant 2` | `You are a helpful assistant` |
+| `variant_3` | `PI Variant 3` | `Amadeus` |
+
+When `system_prompt = None`, Qwen's chat template automatically supplies the
+effective default system prompt:
+
+```text
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.
+```
 
 Each entry should have:
 
 ```python
 "variant_key": {
     "label": "Short plot label",
-    "system_prompt": None,  # or a actual prompt-injection string
+    "system_prompt": None,  # or an actual prompt-injection string
 }
 ```
 
@@ -52,8 +64,8 @@ C4 = prompt 5
 The heatmap notebook treats prompt-formatting variants as the compared
 implementations:
 
-- rows: requested prompt-formatting variant `A`
-- columns: actual prompt-formatting variant `B`
+- rows: requested prompt-formatting variant
+- columns: actual prompt-formatting variant
 
 For each decoding condition and each naive estimator, compute a `3 x 3`
 matrix. The diagonal should be near zero whenever defined. Off-diagonal entries

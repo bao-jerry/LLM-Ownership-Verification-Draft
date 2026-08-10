@@ -1,12 +1,12 @@
 # Prompt-Injection Experiment
 
 This folder contains the prompt-injection / prompt-formatting follow-up
-experiment for the Qwen2.5-14B same-model detection project.
+experiment for the Qwen2.5-14B hosted model tamper-detection project.
 
 The experiment fixes the underlying checkpoint and loading mode, then changes
 only the prompt-formatting variant. This tests whether the estimator can flag an
-endpoint as non-identical when the provider silently injects or modifies actual
-prompting before the user context.
+endpoint as non-identical when the provider silently injects or modifies the
+actual served prompt formatting before the user context.
 
 ## Files
 
@@ -17,17 +17,20 @@ prompting before the user context.
   computes theoretical Naive Method I and Naive Method II limits and plots
   heatmaps.
 - `context_token_tracker.md` records the prompt inventory, canary mapping, and
-  prompt-formatting variant placeholders.
+  final prompt-formatting variants.
 - `experiment_plan.md` records the intended protocol.
 - `logit_payloads/` is where the `.pt` payloads should live after generation.
 
-## User-Controlled Variants
+## Prompt-Formatting Variants
 
-The notebook initializes all three variants as byte-for-byte identical baseline
-prompt-formatting copies: each variant has `system_prompt = None` and reuses the
-same six prompt strings. Edit `PROMPT_FORMATTING_VARIANTS` in the
-prompt-selection notebook when you want to introduce actual prompt-injection
-variants. Keep exactly three keys for the downstream `3 x 3` heatmap.
+The prompt-selection notebook is designed so the prompt-formatting variants can
+be edited directly before generation. The final recorded experiment uses exactly
+three variants for the downstream `3 x 3` heatmap:
+
+- `PI Variant 1`: baseline Qwen chat formatting with Qwen's automatic default
+  system prompt.
+- `PI Variant 2`: explicit system prompt `You are a helpful assistant`.
+- `PI Variant 3`: explicit system prompt `Amadeus`.
 
 Each variant has:
 

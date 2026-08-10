@@ -7,4 +7,5 @@ The goal is to fix the 14B requested model configuration and compare behavior ac
 The heatmap notebook computes 8 total `3 x 3` theoretical-limit grids: 4 decoding conditions times 2 naive estimators, with requested load mode on rows and actual load mode on columns.
 
 See `experiment_plan.md` for the current quantization-level heatmap protocol.
-Shared Python helpers and paper files remain at the repository root.
+Shared Python helpers live in `experiments/`; paper/proof files remain at the
+repository root.

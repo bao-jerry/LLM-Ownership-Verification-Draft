@@ -79,16 +79,20 @@ Payload schema: `next_token_logits_float64_v1`
 | 5 | `qwen25_14b_coder_instruct_8bit_prompt_5_logits.pt` | 62 | 18.875 | 17.625 | 0.772603681339 | 0.221354660776 | 0.993958342115 | Usable; moderate skew toward `0`. |
 | 6 | `qwen25_14b_coder_instruct_8bit_prompt_6_logits.pt` | 64 | 18.5 | 16.375 | 0.885406203043 | 0.105746690951 | 0.991152893994 | Favors `0`, but minority token remains visible. |
 
-## Current Canary Selection Notes
+## Canary Selection Notes
 
-No final fine-tune canary set has been chosen yet.
+The fine-tune / specialized-variant experiment uses the same 14B canary mapping
+as the model re-routing experiment:
 
-For `14b_instruct`, prompts 4 and 5 are the best balanced raw prompts, with prompts 1, 3, and 6 also plausible. Prompt 2 is relatively lopsided.
+- `C1 = prompt 1`
+- `C2 = C3 = prompt 4`
+- `C4 = prompt 5`
 
-For `14b_instruct_1m`, prompt 5 is currently the most balanced raw prompt for token IDs 15 and 16. Prompts 1 and 2 are likely poor canary candidates under top-p style decoding because the minority token is extremely small before any decoding modifications. Prompt 6 may be useful only if the chosen decoding parameters keep the minority token in support.
+This keeps the requested model configuration fixed as the base
+`Qwen/Qwen2.5-14B-Instruct` prompt suite while comparing the actual served
+model configuration against fine-tuned or specialized variants.
 
-For `14b_coder_instruct`, prompt 4 is the best balanced raw prompt. Prompts 1, 2, 3, and 5 are also usable. Prompt 6 is more lopsided but still has visible support for both target tokens. Unlike the non-coder variants, the coder model leaves nontrivial probability mass on code-fence and formatting tokens for several prompts, so P(`0`) + P(`1`) is closer to 0.99 than 1.00.
-
-All three planned fine-tune / specialized-variant prompt inventories have now been recorded. Choose canaries based on practical support for both target tokens under the intended decoding setup, or skip sampling graphs and report neutral-decoding population estimator limits directly.
-
-If the fine-tune experiment is presented as a neutral-decoding theoretical-limit check, graphs may not be necessary. In that case, use `temperature = 1`, no logit bias, and `top_p = 1`, then report the population estimator limits directly from these saved logits.
+All three planned fine-tune / specialized-variant prompt inventories have been
+recorded. The final presentation uses theoretical-limit heatmaps across four
+decoding parameter initializations and two naive estimators. Undefined cells are
+expected when top-p removes one of the target tokens from support.

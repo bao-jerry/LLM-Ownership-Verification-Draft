@@ -2,7 +2,7 @@
 
 ## Goal
 
-Test whether the same-model estimator detects different loading or quantization
+Test whether the tamper-detection estimator detects different loading or quantization
 levels of the same Qwen2.5-14B-Instruct model as non-identical implementation
 variants.
 

@@ -2,7 +2,7 @@
 
 ## Goal
 
-Test whether the same-model estimator detects fine-tuned or specialized
+Test whether the tamper-detection estimator detects fine-tuned or specialized
 Qwen2.5-14B variants as distinct from the base Qwen2.5-14B-Instruct model.
 
 This checks whether the estimator is sensitive to exact functional

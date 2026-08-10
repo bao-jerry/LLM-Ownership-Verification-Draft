@@ -40,13 +40,13 @@ the fixed decoding parameters make token ID `15` or token ID `16` unsampleable
 are marked undefined.
 
 In the main requested-configuration-canary notebook, the requested model configuration supplies canaries.
-Under this protocol, the `Qwen2.5-7B-Instruct` actual-config curve is undefined for
+Under this protocol, the `Qwen2.5-7B-Instruct` actual model configuration curve is undefined for
 the `Qwen2.5-14B-Instruct` and `Qwen2.5-32B-Instruct` requested configs because the
 fixed decoding/top-p setup removes one target token on those requested-configuration
-canaries. The focused 7B actual-config notebook is a prompt-engineering workaround:
+canaries. The focused 7B actual model configuration notebook is a prompt-engineering workaround:
 it keeps the same fixed decoding setup but uses the 7B canaries for both the
-requested-config curve and the 7B actual-config curve. This produces visual comparison
-graphs for the 14B requested config vs 7B actual config and the 32B requested config vs 7B actual config
+requested model configuration curve and the 7B actual model configuration curve. This produces visual comparison
+graphs for the 14B requested model configuration vs 7B actual model configuration and the 32B requested model configuration vs 7B actual model configuration
 without changing the model payloads or decoding seed. In that focused notebook,
 the 14B requested config uses `7,500` samples per context and the 32B requested config uses
 `15,000` samples per context.

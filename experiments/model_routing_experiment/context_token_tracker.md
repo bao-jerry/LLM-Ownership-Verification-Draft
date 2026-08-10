@@ -4,8 +4,8 @@ This file tracks the six prompt/context strings, token pair, and saved payloads
 used by the model re-routing requested-configuration-canary experiment.
 
 In the model re-routing experiment, canaries are owned by the requested model configuration. For a
-fixed `A`, the same canary prompt slots are reused against every actual model configuration
-`B`.
+fixed requested model configuration, the same canary prompt slots are reused
+against every actual model configuration.
 
 ## Chosen Token Pair
 

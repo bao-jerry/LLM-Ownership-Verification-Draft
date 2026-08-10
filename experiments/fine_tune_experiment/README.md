@@ -9,4 +9,5 @@ The current clean candidate set is:
 - `Qwen/Qwen2.5-Coder-14B-Instruct`
 
 See `experiment_plan.md` for the current fine-tune heatmap protocol. Shared
-Python helpers and paper files remain at the repository root.
+Python helpers live in `experiments/`; paper/proof files remain at the
+repository root.
