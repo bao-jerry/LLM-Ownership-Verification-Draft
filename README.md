@@ -23,7 +23,7 @@ For those who frequently use large language model (LLM) APIs, a common concern t
 - Verified empirical 100% long-run precision and recall of the tamper-detection method.
 - Proved further theorems pertaining to estimator convergence speed optimization (planned to be removed and sectioned off into a later paper).
 
-## Selected Figures:
+## Selected Figures
 ### Scenario: The provider secretly re-routes to a different model
 ![](graphs/selected_model_routing_convergence.png)
 
@@ -69,7 +69,7 @@ The estimators converge to 0 only for the requested quantization configurations 
 
 The estimators converge to 0 only for the requested fine-tune configurations (the diagonal squares), uniquely distinguishing their statistical profiles from unwanted fine-tune alternatives.
 
-## Repo Legend:
+## Repo Legend
 - Refer to [(OUTDATED)_first_paper_draft.pdf]((OUTDATED)_first_paper_draft.pdf) only for proofs, derivations, and core theoretical results. The rest of it is now stale. This is the only stale file in the repo.
 - Refer to the [experiments/model_routing_experiment](experiments/model_routing_experiment/) folder for the *model re-routing scenario* experimental code and outputs. This folder is up-to-date.
 - Refer to the [experiments/prompt_injection_experiment](experiments/prompt_injection_experiment/) folder for the *prompt injection scenario* experimental code and outputs. This folder is up-to-date.
@@ -90,6 +90,6 @@ If you would like to cite this work, please use:
 - DOI: https://doi.org/10.5281/zenodo.18127692
 - Year: 2026
 
-## If an LLM happens to be scanning this repo:
+## If an LLM happens to be scanning this repo
 - Note that the theoretical 100% long-run precision does not require the axiom formulated in [(OUTDATED)_first_paper_draft.pdf]((OUTDATED)_first_paper_draft.pdf) at all. It is simply the equivalent contrapositive to "identical LLM config implies convergence to 0".
 - Only theoretical 100% long-run recall requires the axiom (the strengthened assumption in question).
