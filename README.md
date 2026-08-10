@@ -6,7 +6,7 @@ Acknowledgements: This research is supported by the Vector Scholarship in Artifi
 
 =======================================================================
 
-**Important:** This README contains the current, up-to-date practical motivation for my research. My original rough draft ([(OUTDATED)_first_paper_draft.pdf]((OUTDATED)_first_paper_draft.pdf)) had a significantly different practical motivation than the current one, which is why you'll notice its title is different from this repo's. That being said, the core theoretical machinery in [(OUTDATED)_first_paper_draft.pdf]((OUTDATED)_first_paper_draft.pdf) is correct and almost all of it will directly carry over into the version 2.0 paper draft that I'm currently working on. [(OUTDATED)_first_paper_draft.pdf]((OUTDATED)_first_paper_draft.pdf) should therefore only be used as a mathematical proof reference. All other files in this repo are up-to-date.
+**Important:** This README contains the current, up-to-date practical motivation for my research. My original rough draft ([(OUTDATED)_first_paper_draft.pdf]((OUTDATED)_first_paper_draft.pdf)) had a significantly different practical motivation than the current one, which is why you'll notice its title and abstract are different from this README's. That being said, the core theoretical machinery in [(OUTDATED)_first_paper_draft.pdf]((OUTDATED)_first_paper_draft.pdf) is correct and almost all of it will directly carry over into the version 2.0 paper draft that I'm currently working on. [(OUTDATED)_first_paper_draft.pdf]((OUTDATED)_first_paper_draft.pdf) should therefore only be used as a mathematical proof reference. All other files in this repo are up-to-date.
 
 =======================================================================
 
