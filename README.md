@@ -6,7 +6,7 @@ Acknowledgements: This research is supported by the Vector Scholarship in Artifi
 
 =======================================================================
 
-**Important:** The practical problem framing of this research is currently undergoing a major change, causing this repo to be in an intermediate state. For the smoothest repo onboarding experience, it is important to consult the [# Understanding This Repo](#understanding-this-repo) section's clarification about this reframing before reading the repo's files.
+**Important:** The practical problem framing of this research has changed significantly from the original, causing this repo to be in an intermediate state. For the smoothest repo onboarding experience, it is important to consult the [# Understanding This Repo](#understanding-this-repo) section's clarification about this reframing before reading the repo's files.
 
 =======================================================================
 
