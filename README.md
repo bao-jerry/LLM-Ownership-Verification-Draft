@@ -6,7 +6,7 @@ Acknowledgements: This research is supported by the Vector Scholarship in Artifi
 
 =======================================================================
 
-**Important:** The practical problem framing of this research has changed significantly from the original, causing this repo to be in an intermediate state. For the smoothest repo onboarding experience, it is important to consult the [# Understanding This Repo](#understanding-this-repo) section's clarification about this reframing before reading the repo's files.
+**Important:** This README contains the current, up-to-date practical motivation for my research. My original rough draft ([(OUTDATED)_first_paper_draft.pdf]((OUTDATED)_first_paper_draft.pdf)) had a significantly different practical motivation, hence why it had a different title from this repo. That being said, the core theoretical machinery in [(OUTDATED)_first_paper_draft.pdf]((OUTDATED)_first_paper_draft.pdf) is correct and most of it will be directly reused in the version 2.0 paper draft that I'm working on. [(OUTDATED)_first_paper_draft.pdf]((OUTDATED)_first_paper_draft.pdf) should therefore be used as a proof reference only. All other files in this repo are up-to-date. See the [Repo Legend](#repo-legend) to navigate the files and check which ones are stale.
 
 =======================================================================
 
@@ -69,13 +69,8 @@ The estimators converge to 0 only for the requested quantization configurations 
 
 The estimators converge to 0 only for the requested fine-tune configurations (the diagonal squares), uniquely distinguishing their statistical profiles from unwanted fine-tune alternatives.
 
-## Understanding This Repo
-[PROOFS_AND_DERIVATIONS.pdf](PROOFS_AND_DERIVATIONS.pdf) contains all core proofs, derivations, and theoretical results involved in this research project. However, it is *also* the archived version of my first paper draft, one motivated by a significantly different practical problem than the current one despite sharing the same theoretical core. This is why you'll notice that it is titled *Yes, That’s Mine: Asymptotically Foolproof LLM Ownership Identification Against Hidden Adversarial Decoding Parameter Perturbations* even though this repo is titled *Provable LLM Tamper Detection: Catching Model Provider Tampering of Open-Weights LLMs*. The reason for my reframing is that my theoretical results map to *tamper detection* much more organically than to model ownership identification. I am currently rewriting the paper with the tamper detection reframing while preserving all core theoretical machinery from the original. In the meantime, please refer to [PROOFS_AND_DERIVATIONS.pdf](PROOFS_AND_DERIVATIONS.pdf) if you would like to see the main proofs, theorems, and mathematical arguments that I will be carrying over, while keeping in mind that the new version of the paper that I am currently working on will carry a substantially different practical framing.
-
-To see my current intended practical problem framing, please read the [Abstract (Draft)](#abstract-draft) section of this README above. You may consider this README to be fresh and up-to-date.
-
-Repo summary:
-- Refer to [PROOFS_AND_DERIVATIONS.pdf](PROOFS_AND_DERIVATIONS.pdf) purely for proofs, derivations, and theoretical results. The rest of it is now stale. This is the only stale file in the repo.
+## Repo Legend:
+- Refer to [(OUTDATED)_first_paper_draft.pdf]((OUTDATED)_first_paper_draft.pdf) only for proofs, derivations, and core theoretical results. The rest of it is now stale. This is the only stale file in the repo.
 - Refer to the [experiments/model_routing_experiment](experiments/model_routing_experiment/) folder for the *model re-routing scenario* experimental code and outputs. This folder is up-to-date.
 - Refer to the [experiments/prompt_injection_experiment](experiments/prompt_injection_experiment/) folder for the *prompt injection scenario* experimental code and outputs. This folder is up-to-date.
 - Refer to the [experiments/quantization_level_experiment](experiments/quantization_level_experiment/) folder for the *logit quantization scenario* experimental code and outputs. This folder is up-to-date.
@@ -86,7 +81,7 @@ Repo summary:
 ## Current Status
 - The core proofs and experimental results are complete.
 - Secondary proofs and experiments are being considered.
-- The paper will be rewritten and refactored in full with the new tamper-motivated framing. Proofs and theorems will stay mostly identical. [PROOFS_AND_DERIVATIONS.pdf](PROOFS_AND_DERIVATIONS.pdf) contains the current proof and derivation writeup. Its framing and exposition are stale relative to this README, but the core mathematical arguments remain the proof source for this project.
+- The paper will be rewritten and refactored in full under the new tamper-detection-motivated framing. Proofs and theorems will stay mostly identical to the ones in [(OUTDATED)_first_paper_draft.pdf]((OUTDATED)_first_paper_draft.pdf), but its framing and exposition will change substantially.
 
 ## Citation
 If you would like to cite this work, please use:
